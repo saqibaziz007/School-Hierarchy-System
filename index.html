@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Person Hierarchy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>School Management Hierarchy System</h1>
+            <p class="subtitle">Manage Students and Teachers with a Modern Classic UI</p>
+        </header>
+        
+        <div class="content">
+            <div class="form-section">
+                <h2>Add New Person</h2>
+                
+                <div class="person-type">
+                    <div class="type-btn active" id="studentType">Student</div>
+                    <div class="type-btn" id="teacherType">Teacher</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="Enter age" min="5" max="100">
+                </div>
+                
+                <div class="form-group" id="studentFields">
+                    <label for="grade">Grade</label>
+                    <input type="text" id="grade" placeholder="Enter grade (e.g., 10th)">
+                </div>
+                
+                <div class="form-group" id="studentFields">
+                    <label for="gpa">Score</label>
+                    <input type="number" id="gpa" placeholder="Enter Score" min="0" max="4" step="0.1">
+                </div>
+                
+                <div class="form-group" id="teacherFields" style="display: none;">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Enter subject">
+                </div>
+                
+                <div class="form-group" id="teacherFields" style="display: none;">
+                    <label for="yearsExperience">Years of Experience</label>
+                    <input type="number" id="yearsExperience" placeholder="Enter years" min="0" max="50">
+                </div>
+                
+                <button id="addPersonBtn">Add Person</button>
+            </div>
+            
+            <div class="display-section">
+                <h2>School Directory</h2>
+                
+                <div class="filters">
+                    <div class="filter-btn active" data-filter="all">All</div>
+                    <div class="filter-btn" data-filter="student">Students</div>
+                    <div class="filter-btn" data-filter="teacher">Teachers</div>
+                </div>
+                
+                <div class="person-list" id="personList">
+                    <div class="empty-list">
+                        <i class="fas fa-users fa-3x"></i>
+                        <p>No people added yet. Start by adding a student or teacher.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
