@@ -23,7 +23,3 @@ This project provides features for **student registration, teacher management, g
 - **Frontend:** HTML, CSS, JavaScript.
 
 ---
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/school-management-system.git
